@@ -200,3 +200,29 @@
 .side-menu ul li:hover {
   color: #7da7f8;
 }
+/* Announcement Box inside menu-grid */
+.announcement-box {
+  width: 100px;
+  height: 100px;
+  background-color: #1ab7d9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* keeps both logo & text centered */
+  padding: 10px; /* optional */
+}
+
+.announcement-box .announcement-img {
+  width: 70px;   /* make logo bigger */
+  height: auto;
+  margin-bottom: 3px; /* small gap instead of large gap */
+}
+
+.announcement-box .announcement-text {
+  font-size: .5.05rem;
+  font-weight: 385;
+  text-align: center;
+  color: white;
+  margin-top: 0;  /* remove extra spacing */
+}

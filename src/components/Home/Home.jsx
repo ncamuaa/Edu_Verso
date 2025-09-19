@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Home.css";
 import logo from "../../assets/1logo.png";
+import announcementImg from "../../assets/announcement.png";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -70,9 +71,9 @@ export default function HomePage() {
           <img src="/icons/quiz.png" alt="AI Quiz Arena" />
           <p>AI Quiz Arena</p>
         </div>
-        <div className="menu-item cyan">
-          <img src="/icons/announcement.png" alt="Announcement" />
-          <p>Announcement</p>
+        <div className="menu-item cyan announcement-box">
+          <img src={announcementImg} alt="Announcement" className="announcement-img" />
+          <p className="announcement-text">Announcement</p>
         </div>
         <div className="menu-item gray">
           <img src="/icons/settings.png" alt="Settings" />
