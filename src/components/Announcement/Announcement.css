@@ -1,0 +1,78 @@
+.announcement-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center */
+  align-items: center;       /* horizontally center */
+  background: linear-gradient(180deg, #0d0d2b, #1a1a40, #3a0ca3);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.announcement-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.app-title {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Keep sections narrower so they look centered */
+.section {
+  width: 100%;
+  max-width: 400px;   /* limit card width */
+  margin: 15px 0;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f5f5f5;
+}
+
+.announcement-card {
+  background: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: #666;
+}
+
+.footer-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-link a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+}

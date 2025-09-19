@@ -71,7 +71,10 @@ export default function HomePage() {
           <img src="/icons/quiz.png" alt="AI Quiz Arena" />
           <p>AI Quiz Arena</p>
         </div>
-        <div className="menu-item cyan announcement-box">
+        <div className="menu-item cyan announcement-box"
+          onClick={() => navigate("/announcement")}
+          style={{ cursor: "pointer" }}
+        >
           <img src={announcementImg} alt="Announcement" className="announcement-img" />
           <p className="announcement-text">Announcement</p>
         </div>
