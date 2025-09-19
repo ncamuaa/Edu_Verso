@@ -1,0 +1,64 @@
+.splash-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0f1446, #2d3cdb);
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-logo {
+  width: 180px; /* bigger */
+  margin-bottom: 10px; /* close to text */
+  animation: bounceIn 1.5s ease-in-out forwards;
+}
+
+/* Bounce in effect */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Typing animation */
+.splash-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  color: white;
+  overflow: hidden;
+  border-right: 3px solid white; /* blinking cursor */
+  white-space: nowrap;
+  width: 0;
+  margin-top: 0;
+  animation: typing 3s steps(8) forwards, blink 0.7s step-end infinite;
+}
+
+/* typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch; /* "EduVerso" has 8 letters + spacing */
+  }
+}
+
+/* blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
