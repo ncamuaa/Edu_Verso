@@ -1,0 +1,71 @@
+.announcement-container {
+  background: linear-gradient(to bottom, #0f0242, #1e1e9f);
+  color: white;
+  padding: 16px;
+   width: 360px;
+  height: 763px;
+  font-family: Arial, sans-serif;
+}
+
+.announcement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.announcement-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.announcement-search {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.back-btn {
+  font-size: 24px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.announcement-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: white;
+  margin: 10px 0;
+}
+
+.announcement-section {
+  margin: 20px 0;
+}
+
+.announcement-card {
+  background: white;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #444;
+}
+
+.see-all {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline;
+}

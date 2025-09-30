@@ -6,26 +6,53 @@ import logo from "../../assets/2logo.png";
 export default function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Send username to HomePage
-    navigate("/home", { state: { username } });
+    if (!username || !password) {
+      alert("Please enter both username and password.");
+      return;
+    }
+
+    
+    const streakKey = `streak_${username}`;
+    const xpKey = `xp_${username}`;
+
+    let storedStreak = parseInt(localStorage.getItem(streakKey)) || 0;
+    let storedXp = parseInt(localStorage.getItem(xpKey)) || 0;
+
+   
+    storedStreak += 1;
+    storedXp += 50;
+
+    
+    localStorage.setItem(streakKey, storedStreak);
+    localStorage.setItem(xpKey, storedXp);
+
+    
+    localStorage.setItem("username", username);
+
+    navigate("/home");
+    
+const randomGrade = Math.floor(Math.random() * 4) + 7; 
+localStorage.setItem("grade", randomGrade);
+
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
-        {/* Logo */}
+        
         <div className="login-logo">
           <img src={logo} alt="Logo" />
         </div>
 
-        {/* Title */}
+        
         <h2 className="login-title">Login</h2>
 
-        {/* Form */}
+        
         <form onSubmit={handleLogin} className="login-form">
           <input
             type="text"
@@ -38,29 +65,43 @@ export default function Login() {
             type="password"
             placeholder="Password"
             className="login-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <div className="login-options">
             <label>
               <input type="checkbox" /> Remember me
             </label>
-            <a href="/" className="forgot-password">Forgot password?</a>
+            <a href="/" className="forgot-password">
+              Forgot password?
+            </a>
           </div>
 
-          <button type="submit" className="login-btn">Login</button>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
         </form>
 
-        {/* Social Login */}
+        
         <div className="social-login">
           <p>Or continue with</p>
           <div className="social-icons">
-            <img src="/icons/google.png" alt="Google" />
-            <img src="/icons/apple.png" alt="Apple" />
-            <img src="/icons/facebook.png" alt="Facebook" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+              alt="Google"
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/0/747.png"
+              alt="Apple"
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+              alt="Facebook"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
-
